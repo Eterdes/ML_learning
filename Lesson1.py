@@ -2,7 +2,10 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Optional
 import uuid
+from decimal import Decimal, ROUND_HALF_UP, getcontext
 
+getcontext().prec = 28
+CENTS = Decimal("0.01")
 
 # Пользовательские классы исключений
 class AccountFrozenError(Exception):
@@ -54,80 +57,44 @@ class Currency(Enum):
 
 # Абстрактный базовый класс
 class AbstractAccount(ABC):
-    """
-    Абстрактный базовый класс для всех банковских счетов.
-    Определяет общий интерфейс и свойства для всех типов счетов.
-    """
-
     def __init__(
         self,
         account_id: str,
         owner: str,
-        initial_balance: float = 0.0,
+        initial_balance: Decimal = Decimal("0.00"),
         status: AccountStatus = AccountStatus.ACTIVE
     ):
-        """
-        Инициализация абстрактного счёта.
-
-        Args:
-            account_id: Уникальный идентификатор счёта
-            owner: Владелец счёта
-            initial_balance: Начальный баланс (по умолчанию 0.0)
-            status: Статус счёта (по умолчанию ACTIVE)
-        """
         self._account_id = account_id
         self._owner = owner
-        self._balance = initial_balance
+        self._balance: Decimal = initial_balance
         self._status = status
 
     @property
     def account_id(self) -> str:
-        """Получить ID счёта."""
         return self._account_id
 
     @property
     def owner(self) -> str:
-        """Получить владельца счёта."""
         return self._owner
 
     @property
-    def balance(self) -> float:
-        """Получить текущий баланс."""
+    def balance(self) -> Decimal:
         return self._balance
 
     @property
     def status(self) -> AccountStatus:
-        """Получить статус счёта."""
         return self._status
 
     @abstractmethod
-    def deposit(self, amount: float) -> None:
-        """
-        Внести средства на счёт.
-
-        Args:
-            amount: Сумма для внесения
-        """
+    def deposit(self, amount: Decimal) -> None:
         pass
 
     @abstractmethod
-    def withdraw(self, amount: float) -> None:
-        """
-        Снять средства со счёта.
-
-        Args:
-            amount: Сумма для снятия
-        """
+    def withdraw(self, amount: Decimal) -> None:
         pass
 
     @abstractmethod
     def get_account_info(self) -> dict:
-        """
-        Получить детальную информацию о счёте.
-
-        Returns:
-            Словарь с данными счёта
-        """
         pass
 
 
@@ -137,60 +104,51 @@ class BankAccount(AbstractAccount):
     Конкретная реализация банковского счёта с расширенными возможностями.
     Включает валидацию, проверку статусов и поддержку нескольких валют.
     """
-
     def __init__(
         self,
         owner: str,
-        initial_balance: float = 0.0,
+        initial_balance: float | Decimal | int | str = "0.00",
         account_id: Optional[str] = None,
         status: AccountStatus = AccountStatus.ACTIVE,
         currency: Currency = Currency.RUB
     ):
-        """
-        Инициализация банковского счёта.
-
-        Args:
-            owner: Владелец счёта
-            initial_balance: Начальный баланс (по умолчанию 0.0)
-            account_id: ID счёта (генерируется автоматически, если None)
-            status: Статус счёта (по умолчанию ACTIVE)
-            currency: Валюта счёта (по умолчанию RUB)
-
-        Raises:
-            InvalidOperationError: При ошибке валидации
-        """
-        # Валидация входных данных
         self._validate_owner(owner)
-        self._validate_amount(initial_balance)
+        
+        # Приводим к Decimal через строку
+        initial_balance_dec = self._to_money(initial_balance)
+        self._validate_amount(initial_balance_dec)
 
-        # Генерация ID счёта, если не указан
         if account_id is None:
             account_id = self._generate_account_id()
 
-        # Инициализация родительского класса
-        super().__init__(account_id, owner, initial_balance, status)
-
-        # Установка валюты
+        self._money_zero = Decimal("0.00")
+        super().__init__(account_id, owner, initial_balance_dec, status)
         self._currency = currency
 
     @staticmethod
     def _generate_account_id() -> str:
-        """Генерация короткого UUID для ID счёта."""
         return str(uuid.uuid4())[:8].upper()
 
     @staticmethod
     def _validate_owner(owner: str) -> None:
-        """Валидация имени владельца."""
         if not owner or not isinstance(owner, str) or not owner.strip():
             raise InvalidOperationError("Owner name must be a non-empty string")
 
     @staticmethod
-    def _validate_amount(amount: float) -> None:
-        """Валидация суммы транзакции."""
-        if not isinstance(amount, (int, float)):
-            raise InvalidOperationError("Amount must be a number")
-        if amount < 0:
+    def _to_money(amount: float | Decimal | int | str) -> Decimal:
+        if isinstance(amount, Decimal):
+            dec = amount
+        else:
+            dec = Decimal(str(amount))
+        return dec.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+
+    @staticmethod
+    def _validate_amount(amount: Decimal) -> None:
+        if not isinstance(amount, Decimal):
+            raise InvalidOperationError("Amount must be a Decimal")
+        if amount < Decimal("0.00"):
             raise InvalidOperationError("Amount cannot be negative")
+
 
     def _check_account_status(self) -> None:
         """Проверка статуса счёта перед операциями."""
@@ -199,60 +157,32 @@ class BankAccount(AbstractAccount):
         if self._status == AccountStatus.CLOSED:
             raise AccountClosedError(self._account_id)
 
-    def deposit(self, amount: float) -> None:
-        """
-        Внести средства на счёт.
-
-        Args:
-            amount: Сумма для внесения
-
-        Raises:
-            InvalidOperationError: Если сумма некорректна
-            AccountFrozenError: Если счёт заморожен
-            AccountClosedError: Если счёт закрыт
-        """
-        # Валидация суммы
-        self._validate_amount(amount)
-        # Проверка статуса счёта
+    def deposit(self, amount: float | Decimal | int | str) -> None:
+        amount_dec = self._to_money(amount)
+        self._validate_amount(amount_dec)
         self._check_account_status()
 
-        # Сумма должна быть больше нуля
-        if amount == 0:
+        if amount_dec == self._money_zero:
             raise InvalidOperationError("Deposit amount must be greater than zero")
 
-        # Пополнение баланса
-        self._balance += amount
-        print(f"✓ Deposited {amount} {self._currency.value}. New balance: {self._balance} {self._currency.value}")
+        self._balance = (self._balance + amount_dec).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+        print(f"✓ Deposited {amount_dec} {self._currency.value}. New balance: {self._balance} {self._currency.value}")
 
-    def withdraw(self, amount: float) -> None:
-        """
-        Снять средства со счёта.
 
-        Args:
-            amount: Сумма для снятия
-
-        Raises:
-            InvalidOperationError: Если сумма некорректна
-            InsufficientFundsError: Если недостаточно средств
-            AccountFrozenError: Если счёт заморожен
-            AccountClosedError: Если счёт закрыт
-        """
-        # Валидация суммы
-        self._validate_amount(amount)
-        # Проверка статуса счёта
+    def withdraw(self, amount: float | Decimal | int | str) -> None:
+        amount_dec = self._to_money(amount)
+        self._validate_amount(amount_dec)
         self._check_account_status()
 
-        # Сумма должна быть больше нуля
-        if amount == 0:
+        if amount_dec == self._money_zero:
             raise InvalidOperationError("Withdrawal amount must be greater than zero")
 
-        # Проверка достаточности средств
-        if amount > self._balance:
-            raise InsufficientFundsError(self._balance, amount)
+        if amount_dec > self._balance:
+            raise InsufficientFundsError(float(self._balance), float(amount_dec))
 
-        # Снятие средств
-        self._balance -= amount
-        print(f"✓ Withdrew {amount} {self._currency.value}. New balance: {self._balance} {self._currency.value}")
+        self._balance = (self._balance - amount_dec).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+        print(f"✓ Withdrew {amount_dec} {self._currency.value}. New balance: {self._balance} {self._currency.value}")
+
 
     def freeze_account(self) -> None:
         """Заморозить счёт."""
@@ -262,8 +192,22 @@ class BankAccount(AbstractAccount):
         self._status = AccountStatus.FROZEN
         print(f"Account {self._account_id} has been frozen.")
 
+    def payout_remaining(self) -> Decimal:
+        """Вывести весь остаток (для закрытия счёта)."""
+        self._check_account_status()
+        if self._balance == self._money_zero:
+            return self._money_zero
+        amount = self._balance
+        self._balance = self._money_zero
+        print(f"✓ Paid out {amount} {self._currency.value}. New balance: {self._balance} {self._currency.value}")
+        return amount
+
     def close_account(self) -> None:
-        """Закрыть счёт."""
+        """Закрыть счёт (только при нулевом балансе)."""
+        if self._balance != self._money_zero:
+            raise InvalidOperationError(
+                "Cannot close account with non-zero balance. Use payout_remaining() first."
+            )
         self._status = AccountStatus.CLOSED
         print(f"Account {self._account_id} has been closed.")
 
@@ -276,16 +220,10 @@ class BankAccount(AbstractAccount):
         print(f"Account {self._account_id} has been activated.")
 
     def get_account_info(self) -> dict:
-        """
-        Получить детальную информацию о счёте.
-
-        Returns:
-            Словарь с полными данными счёта
-        """
         return {
             "Account ID": self._account_id,
             "Owner": self._owner,
-            "Balance": self._balance,
+            "Balance": float(self._balance),  # для JSON-сериализации
             "Currency": self._currency.value,
             "Status": self._status.value,
             "Account Type": self.__class__.__name__
