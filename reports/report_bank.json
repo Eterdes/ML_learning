@@ -1,0 +1,10 @@
+[
+  {
+    "total_clients": 10,
+    "total_accounts": 12,
+    "total_balance": 930000,
+    "total_transactions": 50,
+    "blocked_transactions": 6,
+    "block_rate_percent": 12.0
+  }
+]

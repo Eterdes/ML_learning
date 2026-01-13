@@ -1,0 +1,11 @@
+[
+  {
+    "client_id": "1",
+    "name": "Иванов Иван",
+    "accounts_count": 2,
+    "total_balance": 150000,
+    "tx_count": 1,
+    "blocked_txs": 0,
+    "avg_tx_amount": 47696.54345101614
+  }
+]
