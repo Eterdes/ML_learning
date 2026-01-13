@@ -1,0 +1,28 @@
+INFO:bank:INFO: Клиент вошёл
+INFO:bank:WARNING: Подозрительная сумма!
+INFO:bank:INFO: Клиент вошёл
+INFO:bank:WARNING: Подозрительная сумма!
+INFO:bank:INFO: Клиент вошёл
+INFO:bank:WARNING: Подозрительная сумма!
+INFO:bank:INFO: Обычная оплата
+INFO:bank:INFO: Риск: LOW
+INFO:bank:WARNING: Большая сумма: 200000
+INFO:bank:WARNING: Операция ночью!
+INFO:bank:INFO: Риск: HIGH
+INFO:bank:INFO: Риск: LOW
+INFO:bank:WARNING: Большая сумма: 200000
+INFO:bank:WARNING: Операция ночью!
+INFO:bank:INFO: Риск: HIGH
+INFO:bank:WARNING: \U0001f6ab ОПЕРАЦИЯ БЛОКИРУЕТСЯ!
+INFO:bank:INFO: Риск: LOW
+INFO:bank:WARNING: Большая сумма: 150000
+INFO:bank:WARNING: Операция ночью!
+INFO:bank:INFO: Риск: HIGH
+INFO:bank:WARNING: \U0001f6ab ОПЕРАЦИЯ БЛОКИРУЕТСЯ!
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 200000
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (3 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
