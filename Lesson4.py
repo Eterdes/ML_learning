@@ -111,10 +111,12 @@ class AbstractAccount(ABC):
 
 
 class BankAccount(AbstractAccount):
-    def __init__(self, owner: str, initial_balance: str | float | int | Decimal = "0.00"):
-        account_id = str(uuid.uuid4())[:8]
+    def __init__(self, owner: str, initial_balance: str | float | int | Decimal = "0.00", account_id: Optional[str] = None):
+        if account_id is None:
+             account_id = str(uuid.uuid4())[:8]
         balance = self._to_money(initial_balance)
         super().__init__(account_id, owner, balance)
+ 
 
     def _to_money(self, amount: str | float | int | Decimal) -> Decimal:
         if isinstance(amount, str):
@@ -461,14 +463,22 @@ if __name__ == "__main__":
     print(f"🚀 {queue.size()} транзакций в очереди")
     
     processor = TransactionProcessor(bank)
-    while queue.size() > 0:
+
+    processed_count = 0
+    total_txs = len(transactions)
+    while processed_count < total_txs:
         tx = queue.get_next()
         if tx is None:
-            break
+            print("Ждём готовые транзакции...")  # опциональный лог
+            import time
+            time.sleep(0.1)
+            continue
         processor.process_transaction(tx)
+        processed_count += 1
         result = f"{tx.status.value}: {tx.tx_type.value} {tx.amount}"
         if tx.failure_reason:
             result += f" ❌ {tx.failure_reason}"
         print(result)
     
     print(f"\n✅ КОНЕЦ: acc1={acc1.balance}, acc2={acc2.balance}")
+    print(f"Остаток в очереди: {queue.size()}")  
