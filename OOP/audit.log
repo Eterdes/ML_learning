@@ -1,0 +1,443 @@
+INFO:bank:INFO: Клиент вошёл
+INFO:bank:WARNING: Подозрительная сумма!
+INFO:bank:INFO: Клиент вошёл
+INFO:bank:WARNING: Подозрительная сумма!
+INFO:bank:INFO: Клиент вошёл
+INFO:bank:WARNING: Подозрительная сумма!
+INFO:bank:INFO: Обычная оплата
+INFO:bank:INFO: Риск: LOW
+INFO:bank:WARNING: Большая сумма: 200000
+INFO:bank:WARNING: Операция ночью!
+INFO:bank:INFO: Риск: HIGH
+INFO:bank:INFO: Риск: LOW
+INFO:bank:WARNING: Большая сумма: 200000
+INFO:bank:WARNING: Операция ночью!
+INFO:bank:INFO: Риск: HIGH
+INFO:bank:WARNING: \U0001f6ab ОПЕРАЦИЯ БЛОКИРУЕТСЯ!
+INFO:bank:INFO: Риск: LOW
+INFO:bank:WARNING: Большая сумма: 150000
+INFO:bank:WARNING: Операция ночью!
+INFO:bank:INFO: Риск: HIGH
+INFO:bank:WARNING: \U0001f6ab ОПЕРАЦИЯ БЛОКИРУЕТСЯ!
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 200000
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (3 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 173172.98783237915
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 327432.44105999987
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 388924.7168297607
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 398508.707670178
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 473264.22003690084
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 140738.59131395072
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 460501.76177139895
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 139581.01633079362
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx18 заблокирована
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 147878.8875662893
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx1 заблокирована
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 267543.15112128586
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 425700.9414697065
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx4 заблокирована
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 406526.00111985067
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 314749.4403249304
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 145155.016524592
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 443361.2509177597
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 469910.65257847466
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx4 заблокирована
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 265907.43100939674
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 476981.9486106653
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:INFO: Итог: LOW (0 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 324161.895461198
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx4 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 355911.22703397693
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (3 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx11 заблокирована
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx12 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 135857.6337083497
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx14 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx18 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 288636.28170364845
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx5 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 299987.6008982749
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx7 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 417590.35441787133
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx10 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 427602.0778110882
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx13 заблокирована
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 344992.58251665795
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx14 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx18 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 237424.27940805463
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx20 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 373594.4965275726
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx22 заблокирована
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 156754.3040594249
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx23 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 496038.1534310773
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx25 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 370455.52091579285
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx34 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx42 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 260904.07740943768
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx45 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 380262.05611402914
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx49 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 293928.06501687074
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx3 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx7 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 289714.02700845787
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx10 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 156011.57208840305
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx21 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f6a8 Большая сумма: 287895.23420961853
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx41 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f319 Операция ночью!
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: HIGH (2 рисков)
+INFO:bank:WARNING: \U0001f6ab БЛОКИРУЕМ операцию!
+INFO:bank:WARNING: \U0001f6ab Tx tx45 заблокирована
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
+INFO:bank:WARNING: \U0001f195 Новый счёт!
+INFO:bank:INFO: Итог: MEDIUM (1 рисков)
