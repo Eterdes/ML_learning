@@ -1,0 +1,31 @@
+start_urls:
+  - https://example.com
+
+# Optional: sitemap URLs
+# sitemap_urls:
+#   - https://example.com/sitemap.xml
+
+max_pages: 100
+max_depth: 2
+max_concurrent: 10
+rate_limit: 0
+
+timeout_total: 15
+user_agent: crawler_day7/1.0
+
+# Optional filters
+# allowed_domains:
+#   - example.com
+# exclude_patterns:
+#   - logout
+
+storage: ndjson
+output: results.ndjson
+
+stats_json: stats.json
+report_html: report.html
+
+log_file: crawler.log
+log_level: INFO
+
+monitor_interval: 1.0
