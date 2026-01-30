@@ -106,29 +106,18 @@ async def main():
 
 Поддерживаются форматы **YAML** и **JSON**.
 
-### Пример `config.yaml`
-
+### Файл `config.yaml`
 ```yaml
 start_urls:
   - https://example.com
 
-sitemap_urls:
-  - https://example.com/sitemap.xml
-
-max_pages: 500
+max_pages: 100
 max_depth: 2
-max_concurrent: 20
+max_concurrent: 10
 rate_limit: 0
 
 timeout_total: 15
 user_agent: crawler_day7/1.0
-
-allowed_domains:
-  - example.com
-
-exclude_patterns:
-  - logout
-  - signup
 
 storage: ndjson
 output: results.ndjson
@@ -140,6 +129,7 @@ log_file: crawler.log
 log_level: INFO
 
 monitor_interval: 1.0
+
 ```
 
 ### Основные параметры
