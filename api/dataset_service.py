@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 from typing import Any
+from sklearn.model_selection import train_test_split
 
 
 class DatasetService:
@@ -44,6 +45,46 @@ class DatasetService:
             "cols": int(cols_count),
             "columns": columns,
             "churn_distribution": churn_distribution,
+        }
+    
+    # day 4 
+    def split_data(self) -> None:
+        if self.df is None:
+            raise RuntimeError("Dataset is not loaded. Call load() first.")
+        
+        y = self.df["churn"]
+        X = self.df.drop(columns=["churn"])
+
+        X_train, X_test, y_train, y_test = train_test_split(
+            X,
+            y,
+            test_size=0.2,
+            stratify=y
+        )
+
+        self.X_train = X_train
+        self.X_test = X_test
+        self.y_train = y_train
+        self.y_test = y_test
+
+    def get_split_info(self) -> dict:
+        if self.X_train is None:
+            raise RuntimeError("Data is not split. Call split_data() first.")
+        
+        train_size = len(self.X_train)
+        test_size = len(self.X_test)
+
+        train_distribution = self.y_train.value_counts().to_dict()
+        train_churn = {str(k): int(v) for k, v in train_distribution.items()}
+
+        test_distribution = self.y_test.value_counts().to_dict()
+        test_churn = {str(k): int(v) for k, v in test_distribution.items()}
+
+        return {
+        "train_size": train_size,
+        "test_size": test_size,
+        "train_churn_distribution": train_churn,
+        "test_churn_distribution": test_churn
         }
 
 
