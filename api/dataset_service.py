@@ -8,6 +8,10 @@ class DatasetService:
     def __init__(self, csv_path: str | Path):
         self.csv_path = Path(csv_path)
         self.df: pd.DataFrame | None = None
+        self.X_train = None
+        self.X_test = None
+        self.y_train = None
+        self.y_test = None
 
     def load(self) -> None:
         if not self.csv_path.exists():
