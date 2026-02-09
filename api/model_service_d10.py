@@ -6,9 +6,9 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
 
 
 class ModelNotTrainedError(RuntimeError):
@@ -85,17 +85,27 @@ class ModelService:
         self.metadata["model_type"] = model_type
         self.metadata["hyperparameters"] = hyperparameters or {}
 
+
     def evaluate_model(self, X_test, y_test) -> dict:
         if self.pipeline is None:
             raise ModelNotTrainedError("Model not trained")
 
         y_pred = self.pipeline.predict(X_test)
+
+        roc_auc = None
+        # roc_auc считаем по вероятностям и только если есть оба класса в y_test
+        if len(set(y_test)) == 2:
+            y_proba = self.pipeline.predict_proba(X_test)[:, 1]
+            roc_auc = float(roc_auc_score(y_test, y_proba))
+
         return {
             "accuracy": float(accuracy_score(y_test, y_pred)),
             "precision": float(precision_score(y_test, y_pred)),
             "recall": float(recall_score(y_test, y_pred)),
-            "f1_score": float(f1_score(y_test, y_pred)),
+            "f1": float(f1_score(y_test, y_pred)),
+            "roc_auc": roc_auc
         }
+    
 
     # ---------- persistence ----------
     def save_churn_model(self):
