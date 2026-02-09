@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import pytest
 
-from api.model_service_d10 import ModelService, ModelNotTrainedError
-from api.model_d10 import FeatureVectorChurn
+from final_api.services.model_service import ModelService, ModelNotTrainedError
+from final_api.schemas.churn import FeatureVectorChurn
 
 def test_model_train_evaluate_predict(tmp_path):
     rng = np.random.default_rng(0)

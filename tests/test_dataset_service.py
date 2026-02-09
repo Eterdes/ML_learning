@@ -1,5 +1,5 @@
 import numpy as np
-from api.dataset_service import DatasetService
+from final_api.services.dataset_service import DatasetService
 
 def test_dataset_load_info_preview_split(synth_csv):
     svc = DatasetService(synth_csv)

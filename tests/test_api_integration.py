@@ -2,11 +2,12 @@ import numpy as np
 import pytest
 from fastapi.testclient import TestClient
 
-from api.dataset_service import DatasetService 
-from api.model_service_d10 import ModelService  
-from api.training_history_d11 import TrainingHistoryService 
+from final_api.services.dataset_service import DatasetService
+from final_api.services.model_service import ModelService
+from final_api.services.training_history import TrainingHistoryService
 
-import api.fastapi_churn_day11 as main
+import final_api.main as main
+
 
 @pytest.fixture
 def client(tmp_path, synth_csv, monkeypatch):

@@ -1,0 +1,11 @@
+{
+  "model_type": "logreg",
+  "hyperparameters": {},
+  "metrics": {
+    "accuracy": 0.7975,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.6300553426990209
+  }
+}
