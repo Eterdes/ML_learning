@@ -1,0 +1,6 @@
+| Метод | Macro F1 | Улучшение |
+| :--- | :--- | :--- |
+| Baseline TF-IDF + LogReg | 0.6645 | - |
+| Лемматизация + LogReg | 0.7043 | +6.00% |
+| Лемматизация + Tri-grams + LinearSVC | 0.7220 | +8.66% |
+| Лемматизация + Tri-grams + Tuned LinearSVC | 0.7220 | +8.66% |

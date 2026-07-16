@@ -1,0 +1,44 @@
+=== АНАЛИЗ ОШИБОК ЛУЧШЕЙ МОДЕЛИ ===
+
+Всего ошибок на тестовой выборке: 223 из 970
+
+Исходный текст: The diesel margin has remained high .
+Истинный класс: positive (2)
+Предсказанный класс: 0
+--------------------------------------------------
+Исходный текст: ` For Nordea , moving into the new headquarters signifies the beginning of a new era .
+Истинный класс: positive (2)
+Предсказанный класс: 1
+--------------------------------------------------
+Исходный текст: The ore body is sufficient to support anticipated production for at least 46 years .
+Истинный класс: neutral (1)
+Предсказанный класс: 2
+--------------------------------------------------
+Исходный текст: Neste Oil extended yesterday 's gains and put on 0.49 pct to 22.72 eur , while utility Fortum shed 1.14 pct to 20.76 eur .
+Истинный класс: neutral (1)
+Предсказанный класс: 2
+--------------------------------------------------
+Исходный текст: The company is also featured in the Ethibel Pioneer Investment Register and included in Innovest 's Global 100 list of the world 's most sustainable corporations .
+Истинный класс: positive (2)
+Предсказанный класс: 1
+--------------------------------------------------
+Исходный текст: Paper maker Stora Enso Oyj said Friday it has been acquitted of charges that it participated in a paper price-fixing conspiracy in the United States .
+Истинный класс: positive (2)
+Предсказанный класс: 0
+--------------------------------------------------
+Исходный текст: The newly created position has been established to strengthen Amer Sports ' management in strategic planning and execution .
+Истинный класс: positive (2)
+Предсказанный класс: 1
+--------------------------------------------------
+Исходный текст: Due to rapid expansion , the market share of Tallink in terms of passenger carriage through Tallinna Sadam Port of Tallinn totaled 55 percent in November against 45.7 percent in November 2005 .
+Истинный класс: positive (2)
+Предсказанный класс: 0
+--------------------------------------------------
+Исходный текст: W+�rtsil+� 's aim is to serve the rapidly growing number of vessels and increasing marine activity in the Barents Sea region .
+Истинный класс: neutral (1)
+Предсказанный класс: 2
+--------------------------------------------------
+Исходный текст: Strongest growth was seen in the new markets in Russia , the Czech Republic , and Slovakia .
+Истинный класс: positive (2)
+Предсказанный класс: 1
+--------------------------------------------------
