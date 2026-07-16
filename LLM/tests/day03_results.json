@@ -1,0 +1,77 @@
+[
+    {
+        "text_id": 1,
+        "status": "success",
+        "data": {
+            "category": "complaint",
+            "sentiment": "negative",
+            "summary": "Payment issue in app: order status is 'Awaiting Payment'. Client needs help urgently.",
+            "key_points": [
+                "Payment completed but order status is still 'Awaiting Payment'",
+                "Client has urgent travel plans (tickets)",
+                "Potential loss of tickets if not resolved soon"
+            ],
+            "final_answer": "I understand your concern. I will escalate this issue immediately to resolve the payment problem as quickly as possible."
+        }
+    },
+    {
+        "text_id": 2,
+        "status": "success",
+        "data": {
+            "category": "support",
+            "sentiment": "positive",
+            "summary": "Client praises support team for quick response and assistance.",
+            "key_points": [
+                "Prompt response in the middle of night",
+                "Helped restore account access quickly",
+                "Prevented important presentation failure"
+            ],
+            "final_answer": "Thank you for your kind words. Your satisfaction means a lot to us."
+        }
+    },
+    {
+        "text_id": 3,
+        "status": "success",
+        "data": {
+            "category": "general_question",
+            "sentiment": "neutral",
+            "summary": "Client inquires about QA engineer vacancies.",
+            "key_points": [
+                "Client has completed courses and knows basic SQL.",
+                "Client is familiar with writing basic test cases.",
+                "Client is interested in a junior position or part-time work."
+            ],
+            "final_answer": "We appreciate your interest. Our current openings are for more experienced QA engineers, but we can certainly keep you updated on future opportunities. Thank you for reaching out!"
+        }
+    },
+    {
+        "text_id": 4,
+        "status": "success",
+        "data": {
+            "category": "complaint",
+            "sentiment": "negative",
+            "summary": "Customer complaint about incorrect order and lack of meat.",
+            "key_points": [
+                "Incorrect food items received (korean noodles, salad with mayonnaise)",
+                "Requested refund or immediate delivery of correct order",
+                "Customer does not eat meat"
+            ],
+            "final_answer": "I apologize for the inconvenience. Please provide your order number so we can look into this immediately and resolve it promptly."
+        }
+    },
+    {
+        "text_id": 5,
+        "status": "success",
+        "data": {
+            "category": "general_question",
+            "sentiment": "neutral",
+            "summary": "Требуются сведения о технической документации и комиссиях для интеграции платежной системы.",
+            "key_points": [
+                "Требуется информация об API и документации для разработчиков.",
+                "Нужна информация о комиссии для юридических лиц.",
+                "Интеграция с сайтом планируется."
+            ],
+            "final_answer": "Спасибо за обращение. Информация о технической документации и комиссиях будет предоставлена в ближайшее время."
+        }
+    }
+]

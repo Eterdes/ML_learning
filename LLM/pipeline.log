@@ -1,0 +1,116 @@
+2026-07-16 23:12:58,005 [INFO] 🚀 ТЕСТ 1: Идеальный сценарий (Happy Path)
+2026-07-16 23:12:58,006 [INFO] --- Начало обработки запроса (Длина: 56 симв.) ---
+2026-07-16 23:12:59,446 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:12:59,457 [INFO] ✅ Метаданные успешно получены и валидированы.
+2026-07-16 23:12:59,457 [INFO] 🎯 Маршрутизация на роль: [SUPPORT]
+2026-07-16 23:13:00,670 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:13:00,671 [INFO] 🎉 Обработка запроса успешно завершена.
+2026-07-16 23:13:00,672 [INFO] Результат Happy Path:
+{
+  "category": "support",
+  "sentiment": "negative",
+  "summary": "Неисправность кнопки оплаты в приложении",
+  "final_answer": "Клиенту:\n\nВаше сообщение принято.\n\n1. Мы уже зафиксировали ваш запрос и проверяем текущий статус транзакции через банковский шлюз.\n2. Проверка займет до 15 минут. Если платеж был успешно проиндексирован, заказ будет автоматически подтвержден без необходимости повторной оплаты.\n\nОжидайте уведомления о результатах проверки. В случае возникновения дополнительных вопросов, пожалуйста, обращайтесь."
+}
+
+2026-07-16 23:13:00,672 [INFO] 🚀 ТЕСТ 2: Симуляция падения API (Connection Refused)
+2026-07-16 23:13:00,672 [INFO] --- Начало обработки запроса (Длина: 26 симв.) ---
+2026-07-16 23:13:00,672 [WARNING] ⚠️ Попытка 1/3 провалилась: Ollama API connection refused (simulated)
+2026-07-16 23:13:01,173 [WARNING] ⚠️ Попытка 2/3 провалилась: Ollama API connection refused (simulated)
+2026-07-16 23:13:01,673 [WARNING] ⚠️ Попытка 3/3 провалилась: Ollama API connection refused (simulated)
+2026-07-16 23:13:01,673 [ERROR] 🚨 Все попытки запроса к API исчерпаны.
+2026-07-16 23:13:01,673 [ERROR] ❌ Ошибка на этапе классификации: Ollama API connection refused (simulated)
+2026-07-16 23:13:01,673 [WARNING] 🔄 Активирован fallback-режим генерации метаданных.
+2026-07-16 23:13:01,673 [INFO] 🎯 Маршрутизация на роль: [GENERAL_QUESTION]
+2026-07-16 23:13:01,673 [WARNING] ⚠️ Попытка 1/3 провалилась: Ollama API connection refused (simulated)
+2026-07-16 23:13:02,175 [WARNING] ⚠️ Попытка 2/3 провалилась: Ollama API connection refused (simulated)
+2026-07-16 23:13:02,675 [WARNING] ⚠️ Попытка 3/3 провалилась: Ollama API connection refused (simulated)
+2026-07-16 23:13:02,675 [ERROR] 🚨 Все попытки запроса к API исчерпаны.
+2026-07-16 23:13:02,675 [WARNING] 🔄 Активирован fallback для финального ответа.
+2026-07-16 23:13:02,675 [INFO] 🎉 Обработка запроса успешно завершена.
+2026-07-16 23:13:02,675 [INFO] Результат при упавшем API (сработал Fallback):
+{
+  "category": "general_question",
+  "sentiment": "neutral",
+  "summary": "Привет, у вас есть скидки?",
+  "final_answer": "Здравствуйте! Мы получили ваше обращение и уже передали его профильному специалисту. Скоро вернемся с ответом."
+}
+
+2026-07-16 23:13:02,676 [INFO] 🚀 ТЕСТ 3: Симуляция битого JSON от модели
+2026-07-16 23:13:02,676 [INFO] --- Начало обработки запроса (Длина: 29 симв.) ---
+2026-07-16 23:13:03,256 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:13:03,257 [ERROR] ❌ Ошибка на этапе классификации: Невалидный JSON: Фигурные скобки JSON не найдены в ответе модели.
+2026-07-16 23:13:03,257 [WARNING] 🔄 Активирован fallback-режим генерации метаданных.
+2026-07-16 23:13:03,257 [INFO] 🎯 Маршрутизация на роль: [GENERAL_QUESTION]
+2026-07-16 23:13:03,868 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:13:03,869 [INFO] 🎉 Обработка запроса успешно завершена.
+2026-07-16 23:13:03,869 [INFO] Результат при битом JSON (сработал Fallback):
+{
+  "category": "general_question",
+  "sentiment": "neutral",
+  "summary": "Мне всё понравилось, спасибо!",
+  "final_answer": "Спасибо за ваше удовлетворение! Рад был помочь. Если у вас возникнут еще вопросы, не стесняйтесь обращаться. Пусть ваш день будет успешным!"
+}
+
+2026-07-16 23:13:03,869 [INFO] 🚀 ТЕСТ 4: Симуляция пропущенных полей в JSON
+2026-07-16 23:13:03,870 [INFO] --- Начало обработки запроса (Длина: 31 симв.) ---
+2026-07-16 23:13:04,399 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:13:04,401 [ERROR] ❌ Ошибка на этапе классификации: 2 validation errors for ClassificationSchema
+sentiment
+  Field required [type=missing, input_value={'category': 'support'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+summary
+  Field required [type=missing, input_value={'category': 'support'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.12/v/missing
+2026-07-16 23:13:04,401 [WARNING] 🔄 Активирован fallback-режим генерации метаданных.
+2026-07-16 23:13:04,402 [INFO] 🎯 Маршрутизация на роль: [GENERAL_QUESTION]
+2026-07-16 23:13:05,034 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:13:05,034 [INFO] 🎉 Обработка запроса успешно завершена.
+2026-07-16 23:13:05,034 [INFO] Результат при пропущенных полях (сработал Fallback):
+{
+  "category": "general_question",
+  "sentiment": "neutral",
+  "summary": "Верните деньги, курьер опоздал!",
+  "final_answer": "Извините за给您 доставленные неудобства. К сожалению, мы не вправе возвращать денежные средства по причинам задержек курьерской службы."
+}
+
+2026-07-16 23:24:43,151 [INFO] === Запуск локального демо-тестирования ===
+2026-07-16 23:24:43,151 [ERROR] Файл demo_inputs.json не найден!
+2026-07-16 23:25:20,428 [INFO] === Запуск локального демо-тестирования ===
+2026-07-16 23:25:20,428 [INFO] Старт обработки запроса: У меня списались деньги за подписку, хотя я её отк...
+2026-07-16 23:25:28,085 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:28,093 [INFO] Метаданные успешно валидированы.
+2026-07-16 23:25:29,597 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:31,048 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:31,050 [WARNING] Попытка 1: Ответ отклонен: Ответ содержит явное предложение о бесплатной подписке, что может быть воспринято клиентом как попытка урегулировать ситуацию без полного компенсации.
+2026-07-16 23:25:32,396 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:33,039 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:33,039 [INFO] Ответ одобрен модератором.
+2026-07-16 23:25:33,040 [INFO] Старт обработки запроса: Здравствуйте. Планируем внедрить вашу систему лоял...
+2026-07-16 23:25:33,613 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:33,614 [INFO] Метаданные успешно валидированы.
+2026-07-16 23:25:34,653 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:35,348 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:35,348 [INFO] Ответ одобрен модератором.
+2026-07-16 23:25:35,349 [INFO] Старт обработки запроса: Приложение постоянно вылетает при переходе в корзи...
+2026-07-16 23:25:35,928 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:35,928 [INFO] Метаданные успешно валидированы.
+2026-07-16 23:25:37,581 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:38,316 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:38,317 [INFO] Ответ одобрен модератором.
+2026-07-16 23:25:38,318 [INFO] Старт обработки запроса: Ребята, спасибо вам огромное! Доставка приехала за...
+2026-07-16 23:25:38,971 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:38,971 [INFO] Метаданные успешно валидированы.
+2026-07-16 23:25:40,028 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:40,723 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:40,724 [WARNING] Попытка 1: Ответ отклонен: Ответ содержит технический текст, не связанный с клиентским запросом и его позитивными отзывами о доставке.
+2026-07-16 23:25:42,025 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:42,665 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:42,665 [INFO] Ответ одобрен модератором.
+2026-07-16 23:25:42,666 [INFO] Старт обработки запроса: Подскажите, пожалуйста, адрес вашего центрального ...
+2026-07-16 23:25:43,254 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:43,254 [INFO] Метаданные успешно валидированы.
+2026-07-16 23:25:44,084 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:44,727 [INFO] HTTP Request: POST http://localhost:11434/v1/chat/completions "HTTP/1.1 200 OK"
+2026-07-16 23:25:44,728 [INFO] Ответ одобрен модератором.
+2026-07-16 23:25:44,729 [INFO] Демо-тесты завершены. Результаты сохранены в demo_results.json
